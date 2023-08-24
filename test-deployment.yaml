@@ -17,3 +17,9 @@ spec:
       containers:
         - image: swaggerapi/petstore
           name: test
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
+              
